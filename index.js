@@ -391,27 +391,64 @@
 //     let result= await fetchData
 // }
 
-fetch('https://api.chucknorris.io/jokes/random')
-.then((res)=>{
-    return res.json();
-})
-.then((data)=>{
-    let tbody = document.querySelector('tbody');
-    Object.keys(data).forEach( (item)=>{
-        if(data[item].length){
-            console.log(`${item}: ${data[item]}`);
-            tbody.innerHTML +=
-            `
-                <tr>
-                    <td>${item}</td>
-                    <td>${data[item]}</td>
-                </tr>
-            `
+// fetch('https://api.chucknorris.io/jokes/random')
+// .then((res)=>{
+//     return res.json();
+// })
+// .then((data)=>{
+//     let tbody = document.querySelector('tbody');
+//     Object.keys(data).forEach( (item)=>{
+//         if(data[item].length){
+//             console.log(`${item}: ${data[item]}`);
+//             tbody.innerHTML +=
+//             `
+//                 <tr>
+//                     <td>${item}</td>
+//                     <td>${data[item]}</td>
+//                 </tr>
+//             `
+//         }
+//     } )
+// })
+
+
+//*******LOCAL STORAGE EXAMPLE*********//
+
+let people = [];
+// Submit button/display button
+let submit = document.querySelector('#submit');
+let display = document.querySelector('#display');
+
+// add event listener
+submit.addEventListener('click', (e) => {
+    e.preventDefault();
+    let firstName = document.querySelector('#firstName').value;
+    let surname = document.querySelector('#surname').value;
+    let email = document.querySelector('#email').value;
+
+    //push an object into an array
+
+    people.push(
+        {
+        firstName,
+        surname,
+        email
         }
-    } )
+    )
+    // console.log(people);
+
+    // Local Storage
+
+    localStorage.setItem('data', JSON.stringify(people));
 })
 
+// dIsplay
+display.addEventListener('click', (e) => {
+    e.preventDefault();
+    console.log(JSON.parse(localStorage.getItem('data'))
+    );
 
+})
 
 
 
