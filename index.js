@@ -369,13 +369,50 @@
 // // }
 // addition(1, 2,"Siwe",3,4);
 
-//**********Fetch */
+//**********Fetch***********//
 
-fetch("../data/index.json")
-  .then((res) => {
+// fetch("../data/index.json")
+//   .then((res) => {
+//     return res.json();
+//   })
+//   .then((data) => {
+//     let results = data.results;
+//     console.table(results);
+//  });
+
+
+ //*****Asynchronous function using fetch api****//
+
+// async function fetchData() {
+//     let data = await fetch('')
+//     return data;
+// }
+// async function display() {
+//     let result= await fetchData
+// }
+
+fetch('https://api.chucknorris.io/jokes/random')
+.then((res)=>{
     return res.json();
-  })
-  .then((data) => {
-    let results = data.results;
-    console.table(results);
-  });
+})
+.then((data)=>{
+    let tbody = document.querySelector('tbody');
+    Object.keys(data).forEach( (item)=>{
+        if(data[item].length){
+            console.log(`${item}: ${data[item]}`);
+            tbody.innerHTML +=
+            `
+                <tr>
+                    <td>${item}</td>
+                    <td>${data[item]}</td>
+                </tr>
+            `
+        }
+    } )
+})
+
+
+
+
+
+
