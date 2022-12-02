@@ -1,0 +1,16 @@
+{
+    "results":[
+        {
+            "id":1,
+            "firstName":"Peter",
+            "surnmame":"Parker",
+            "email":"peter@gmail.com"
+        },
+        {
+            "id":2,
+            "firstName":"Uzu",
+            "surnmame":"Khanye",
+            "email":"uzu@gmail.com"
+        }
+    ]
+}

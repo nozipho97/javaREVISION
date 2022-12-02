@@ -1,13 +1,12 @@
 //===Math methods==//
 
-
 // let data = [9, 3, 1, 'Peter', 5, 10, 'Karen', 29];
 // let size = data.length - 1;
 // console.log('Array size:', size);
 
 //console.log('at():', data.at(-1));
 
- //let middleIndex = Math.trunc(data.length - 1)/ 2;
+//let middleIndex = Math.trunc(data.length - 1)/ 2;
 // console.log("middle elememt:", middleIndex);
 // console.log("middle element:", data.slice(middleIndex, middleIndex+2));
 //data.slice("middleIndex, middle element", +2);
@@ -18,18 +17,17 @@
 // } else {
 //     console.log(data[middleIndex]);
 // }
-   //with one string
+//with one string
 // let onlyNumbers = data.splice(3, 1);
 // console.log('Max:', Math.max(...data));
 
-   //when we have more than one string 
+//when we have more than one string
 
 // let onlyNumbers = data.filter(item => {
 //     if (typeof item != 'string')
 //         return item;
 // })
 // console.log('Max:', Math.max(...onlyNumbers));
-
 
 // const messege = 'hello'
 // console.log(messege);
@@ -49,7 +47,7 @@
 // console.log(sentence[0]);
 // console.log(sentence.toLowerCase());
 // console.log(sentence.split('')); //changes to charectors//with space between the paranthesis they alphabets split  ...
- 
+
 //===dates===//
 // let myDate = new Date('2022/Nov/29');
 // console.log('My date:', myDate.toLocaleDateString());
@@ -57,10 +55,10 @@
 // function addDays(theDate, days) {
 //     return new Date(theDate.getTime() + days * 24 * 60 * 60 * 1000);
 //     console.log(addDays)
-// } 
+// }
 
 // var newDate = addDays(new Date(), 5);
-   //========//
+//========//
 //
 
 //===if statement==//
@@ -82,7 +80,6 @@
 //     console.log('Bring another reciept');
 // }
 
-
 // let myDate=new Date().getTime()
 // let age = 18;
 // let salary = 50000;
@@ -92,7 +89,6 @@
 //     console.log('Thank you for coming!');
 // }
 //use logical operators such as && ,||, !, for 2 or more statements
-
 
 //switch statement//
 // let monthInt = 1;
@@ -104,7 +100,6 @@
 //         console.log('February');
 //     break;
 // }
-
 
 // let grade = 100;
 // switch (grade) {
@@ -142,7 +137,6 @@
 // if ((y >= 10 && x <= 20) || (y === undefined)){
 //    console.log('something');
 // }
-
 
 // let marks = 40;
 // switch (marks) {
@@ -199,7 +193,6 @@
 //    'mazda'
 // ]
 
-
 // let myCar = {
 //    make: 'Toyota',
 //    model: 'Corolla',
@@ -212,13 +205,12 @@
 // };
 // for (const key in myCar) {
 //    console.log(myCar[key]);
-   
+
 // }
 
 // for (let index = 0; index < myCar.length; index++){
 //    console.log(cars[0]);
 // }
-
 
 //****WHILE LOOP****checks before//
 //cnt=counter
@@ -278,7 +270,7 @@
 
 // function CreatePerson() {
 //    return {
-      
+
 //    }
 // }
 
@@ -292,12 +284,98 @@
 
 //***ONCLICK***//
 
-function addition(e) {
-   e.preventDefault();
-   let number1 = document.querySelector('#number1').value;
-   let number2 = document.querySelector('#number2').value;
-   //OUTPUT
-   let output = document.querySelector('#output');
-   output.innerText = eval(`${number1}+${number2}`);
-}
+//function addition(e) {
+//    e.preventDefault();
+//    let number1 = document.querySelector('#number1').value;
+//    let number2 = document.querySelector('#number2').value;
+//    //OUTPUT
+//    let output = document.querySelector('#output');
+//    output.innerText = eval(`${number1}+${number2}`);
+//}
 
+// let ouput = documemt.querySelector('button');
+// ouput.addEventListener('click', (e) => {
+//    e.preventDefault();
+//    let number1 = document.querySelector('#number1').value;
+//    let number2 = document.querySelector('#number2').value;
+//    //OUTPUT
+//    let output = document.querySelector('#output');
+//    output.innerText = eval(`${number1}+${number2}`);
+
+// })
+
+//*********REDUCE***********//
+
+// let numbers = [
+//    1, 2, 3, 4, 5
+// ];
+// let sum = numbers.reduce((a, b) => {
+//    return a + b;
+// })
+//    console.log(`Sum:${sum}`);
+
+//*********MAPPING************//
+
+//  let numbers = [
+//       1, 2, 3, 4, 5
+//    ];
+// let double = numbers.map((item) => {
+//    return item * 2;
+// })
+// console.log('Current array: ', numbers);
+// console.log('Double: ',double);
+
+// let numbers = [1, 2, 3, 4, 5];
+// let people = [
+//   {
+//     id: 1,
+//     firstname: "James",
+//     surname: "Henk",
+//   },
+//   {
+//     id: 2,
+//     firstname: "Uzu",
+//     surname: "Dywili",
+//   },
+// ];
+// console.table(people);
+
+// let peopleFirstNames = people.map((item) => {
+//   return item.firstname;
+// });
+// console.log(peopleFirstNames);
+
+//****HOISTING****//
+
+// addition(5,8);
+
+// function addition(a, b) {
+//    console.log(a + b);
+// }
+// addition(5,8);
+
+//******REST OPERATOR******* *//
+
+// function addition(...args) {
+//    let sum = args.filter(Number).reduce((a, b) => {
+//       return a + b;
+//    })
+//    console.log('Sum: ', sum);
+// }
+//    // let sum = args.reduce((a, b) => {
+//    //    return a + b;
+//    // })
+//    // console.log(sum);
+// // }
+// addition(1, 2,"Siwe",3,4);
+
+//**********Fetch */
+
+fetch("../data/index.json")
+  .then((res) => {
+    return res.json();
+  })
+  .then((data) => {
+    let results = data.results;
+    console.table(results);
+  });
